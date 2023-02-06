@@ -1,11 +1,13 @@
 // import ApiRickAndMorty from "./components/consumeApiRickAndMorty/ApiRickAndMorty";
-import Form from "./components/Form/Form";
+// import Form from "./components/Form/Form";
+import CrudApp from "./components/CRUDApp/CrudApp";
 
 function App() {
   return (
     <div>
       {/* <ApiRickAndMorty /> */}
-      <Form />
+      {/* <Form /> */}
+      <CrudApp />
     </div>
   );
 }
