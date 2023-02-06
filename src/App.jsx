@@ -1,9 +1,11 @@
-import ApiRickAndMorty from "./components/consumeApiRickAndMorty/ApiRickAndMorty";
+// import ApiRickAndMorty from "./components/consumeApiRickAndMorty/ApiRickAndMorty";
+import Form from "./components/Form/Form";
 
 function App() {
   return (
     <div>
-      <ApiRickAndMorty />
+      {/* <ApiRickAndMorty /> */}
+      <Form />
     </div>
   );
 }
