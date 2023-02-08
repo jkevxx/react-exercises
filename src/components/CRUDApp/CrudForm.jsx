@@ -6,7 +6,7 @@ const initialForm = {
   id: null,
 };
 
-const CrudForm = () => {
+const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
   const [form, setForm] = useState(initialForm);
 
   const handleChange = (e) => {
@@ -18,8 +18,22 @@ const CrudForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!form.name || !form.constellation) {
+      alert("data insufficient");
+      return;
+    }
+    if (form.id === null) {
+      createData(form);
+    } else {
+      updateData(form);
+    }
+
+    handleReset();
   };
-  const handleReset = (e) => {};
+  const handleReset = (e) => {
+    setForm(initialForm);
+    setDataToEdit(null);
+  };
 
   return (
     <div>
@@ -40,7 +54,7 @@ const CrudForm = () => {
           onChange={handleChange}
         />
         <input type="submit" value="Send" />
-        <input type="reset" />
+        <input type="reset" value="Clean" onClick={handleReset} />
       </form>
     </div>
   );
