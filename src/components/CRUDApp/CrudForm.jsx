@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const initialForm = {
   name: "",
@@ -9,6 +9,18 @@ const initialForm = {
 const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
   const [form, setForm] = useState(initialForm);
 
+  useEffect(() => {
+    if (dataToEdit) {
+      setForm(dataToEdit);
+    } else {
+      setForm(initialForm);
+    }
+
+    // return () => {
+    //   second;
+    // };
+  }, [dataToEdit]);
+
   const handleChange = (e) => {
     setForm({
       ...form,
@@ -18,6 +30,7 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (!form.name || !form.constellation) {
       alert("data insufficient");
       return;
@@ -37,7 +50,7 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
 
   return (
     <div>
-      <h3>Add</h3>
+      <h3>{dataToEdit ? "Edit" : "Add"}</h3>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

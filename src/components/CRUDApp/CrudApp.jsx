@@ -39,8 +39,16 @@ const CrudApp = () => {
     data.id = Date.now();
     setDb([...db, data]);
   };
-  const updateData = (data) => {};
-  const deleteData = (id) => {};
+  const updateData = (data) => {
+    let newData = db.map((element) =>
+      element.id === data.id ? data : element
+    );
+    setDb(newData);
+  };
+  const deleteData = (id) => {
+    let newData = db.filter((element) => element.id !== id);
+    setDb(newData);
+  };
 
   return (
     <>
@@ -53,8 +61,8 @@ const CrudApp = () => {
       />
       <CrudTable
         data={db}
-        deleteData={deleteData}
         setDataToEdit={setDataToEdit}
+        deleteData={deleteData}
       />
     </>
   );
