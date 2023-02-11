@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CrudForm from "./CrudForm";
 import CrudTable from "./CrudTable";
+import "./crudApp.css";
 
 const initialDB = [
   {
@@ -46,24 +47,32 @@ const CrudApp = () => {
     setDb(newData);
   };
   const deleteData = (id) => {
-    let newData = db.filter((element) => element.id !== id);
-    setDb(newData);
+    let isDelete = window.confirm(`Are you sure to delete this ${id}?`);
+
+    if (isDelete) {
+      let newData = db.filter((element) => element.id !== id);
+      setDb(newData);
+    } else {
+      return;
+    }
   };
 
   return (
     <>
       <h1>CRUD App</h1>
-      <CrudForm
-        createData={createData}
-        updateData={updateData}
-        dataToEdit={dataToEdit}
-        setDataToEdit={setDataToEdit}
-      />
-      <CrudTable
-        data={db}
-        setDataToEdit={setDataToEdit}
-        deleteData={deleteData}
-      />
+      <article className="grid-1-2">
+        <CrudForm
+          createData={createData}
+          updateData={updateData}
+          dataToEdit={dataToEdit}
+          setDataToEdit={setDataToEdit}
+        />
+        <CrudTable
+          data={db}
+          setDataToEdit={setDataToEdit}
+          deleteData={deleteData}
+        />
+      </article>
     </>
   );
 };
