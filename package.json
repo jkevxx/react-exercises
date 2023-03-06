@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "fake-api":"json-server --watch src/components/crudAPI/api/db.json --port 5000"
+    "fake-api":"json-server --watch src/crudAPI/api/db.json --port 5000"
   },
   "dependencies": {
     "json-server": "^0.17.2",

@@ -2,7 +2,7 @@
 // import Form from "./components/Form/Form";
 // import CrudApp from "./components/CRUDApp/CrudApp";
 
-import { CrudApi } from "./components/crudAPI/CrudApi";
+import { CrudApi } from "./crudAPI/components/CrudApi";
 
 function App() {
   return (
