@@ -7,12 +7,13 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "fake-api":"json-server --watch src/crudAPI/api/db.json --port 5000"
+    "fake-api": "json-server --watch src/crudAPI/api/db.json --port 5000"
   },
   "dependencies": {
     "json-server": "^0.17.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
