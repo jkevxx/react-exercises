@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Todo from './Todo';
 
 const TodoApp = () => {
   const [title, setTitle] = useState('');
@@ -24,6 +25,18 @@ const TodoApp = () => {
     setTitle('');
   };
 
+  const handleUpdate = (id, value) => {
+    const temp = [...todos];
+    const item = temp.find((todo) => todo.id === id);
+    item.title = value;
+    setTodos(temp);
+  };
+
+  const handleDelete = (id) => {
+    const temp = todos.filter((todo) => todo.id !== id);
+    setTodos(temp);
+  };
+
   return (
     <div className="todoContainer">
       <form onSubmit={handleSubmit}>
@@ -38,7 +51,12 @@ const TodoApp = () => {
 
       <div className="todosContainer">
         {todos.map((todo) => (
-          <div key={todo.id}>{todo.title}</div>
+          <Todo
+            key={todo.id}
+            todo={todo}
+            onUpdate={handleUpdate}
+            onDelete={handleDelete}
+          />
         ))}
       </div>
     </div>
