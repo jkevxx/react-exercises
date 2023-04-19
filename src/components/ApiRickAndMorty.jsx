@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { getCharacters, getCharacterById } from "./api/character";
+import { useEffect, useState } from 'react';
+import { getCharacters, getCharacterById } from '../api/character';
 
 const ApiRickAndMorty = () => {
   const [character, setCharacter] = useState({});
