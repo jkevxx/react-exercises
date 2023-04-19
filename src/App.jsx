@@ -1,9 +1,7 @@
-import ApiRickAndMorty from './components/ApiRickAndMorty';
-
 function App() {
   return (
     <div>
-      <ApiRickAndMorty />
+      <h2>App</h2>
     </div>
   );
 }
