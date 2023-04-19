@@ -1,4 +1,4 @@
-import { CrudApi } from './crudAPI/components/CrudApi';
+import { CrudApi } from './components/CrudApi';
 
 function App() {
   return (
