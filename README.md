@@ -1,10 +1,6 @@
-### React Router
+### React CRUD con Context API y useReducer Hook
 
-- [Video tutorial](https://youtu.be/7xRVnmWcTE8)
-
-### Protected Routes
-
-- [Video tutorial](https://youtu.be/42tFXd1PdCk)
+- [Video tutorial](https://youtu.be/jLpPc_J2_xo)
 
 ### Command to add Tailwind
 
