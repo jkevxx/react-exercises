@@ -1,7 +1,7 @@
-### React Router
+### React y Redux Toolkit CRUD
 
-- [Video tutorial](https://youtu.be/7xRVnmWcTE8)
+- [Video tutorial](https://youtu.be/w2rAP7d6ndg)
 
-### Protected Routes
+### Command to add Tailwind
 
-- [Video tutorial](https://youtu.be/42tFXd1PdCk)
+`npx tailwindcss-cli build --output tailwind.css`
