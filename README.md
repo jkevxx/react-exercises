@@ -1,7 +1,3 @@
-### React Router
+### The Rick and Morty API
 
-- [Video tutorial](https://youtu.be/7xRVnmWcTE8)
-
-### Protected Routes
-
-- [Video tutorial](https://youtu.be/42tFXd1PdCk)
+- [Link](https://rickandmortyapi.com/)
