@@ -16,8 +16,13 @@ const FormEdit = ({ todo, onUpdate, setIsEdit }) => {
 
   return (
     <form className="todoUpdateForm" onSubmit={handleSubmit}>
-      <input type="text" onChange={handleChange} value={newValue || ''} />
-      <button>Update</button>
+      <input
+        className="todoInput"
+        type="text"
+        onChange={handleChange}
+        value={newValue || ''}
+      />
+      <button className="button">Update</button>
     </form>
   );
 };

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Todo from './Todo';
 
+import './todoApp.css';
+
 const TodoApp = () => {
   const [title, setTitle] = useState('');
   const [todos, setTodos] = useState([]);
@@ -39,12 +41,13 @@ const TodoApp = () => {
 
   return (
     <div className="todoContainer">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="todoCreateForm">
         <input
           type="text"
           className="todoInput"
           value={title}
           onChange={handleChange}
+          placeholder="write a task"
         />
         <input type="submit" value="create Todo" className="buttonCreate" />
       </form>
