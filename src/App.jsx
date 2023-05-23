@@ -1,7 +1,9 @@
+import User from './components/User';
+
 function App() {
   return (
     <div>
-      <h2>App</h2>
+      <User />
     </div>
   );
 }
