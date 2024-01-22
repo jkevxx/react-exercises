@@ -26,10 +26,12 @@ const WeatherMainInfo = ({ weather }) => {
         width="100%"
         height="450"
         style={{ border: 0 }}
-        allowfullscreen=""
+        allowFullScreen=""
         loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        src={`https://www.google.com/maps/embed/v1/place?q=${weather?.location.name}&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8`}
+        referrerPolicy="no-referrer-when-downgrade"
+        src={`https://www.google.com/maps/embed/v1/place?q=${
+          weather?.location.name
+        }&key=${import.meta.env.VITE_MAPS_API}`}
       ></iframe>
     </div>
   );
